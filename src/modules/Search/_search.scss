@@ -1,0 +1,53 @@
+.header-search {
+    height: 56%;
+    width: 20rem;
+    margin-left: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    form,
+    .form-control,
+    button {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    form {
+        .form-control {
+            border: 1px solid red;
+            position: relative;
+            padding-left: 2.3rem;
+            margin-right: 0 !important;
+            border-radius: 8px 0 0 8px;
+            border-right: none;
+        }
+    }
+    span {
+        height: 100%;
+        width: 9%;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        left: 6px;
+        svg {
+            height: 1rem;
+            width: 1rem;
+            .cls-1 {
+                fill: #6c757d;
+            }
+        }
+    }
+    button {
+        width: 33%;
+        color: red;
+        border: 1px solid red;
+        border-radius: 0 8px 8px 0;
+        &:hover {
+            background-color: red;
+            color: white;
+        }
+    }
+}

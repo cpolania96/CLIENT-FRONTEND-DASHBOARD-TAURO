@@ -1,0 +1,186 @@
+header {
+    width: 95%;
+    height: 3rem;
+    display: flex;
+    grid-area: 1 / 2 / 2 / 4;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 28px;
+    .quickact {
+        height: 80%;
+        width: 13em;
+        background-color: rgba(255, 0, 0, 0.33);
+        border: 1px solid red;
+        border-radius: 4px;
+        h6 {
+            height: 36%;
+            display: flex;
+            justify-content: center;
+            font-size: 0.8rem;
+            padding-top: 1px;
+            @include roboto;
+            margin: 0;
+            font-weight: bold;
+        }
+        ul {
+            height: 64%;
+            width: 100%;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            li {
+                width: 33.3%;
+                height: 100%;
+                list-style: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+            }
+            .container-label {
+                width: 62px;
+                height: 37px;
+                position: absolute;
+                display: flex;
+                top: 26px;
+                justify-content: center;
+                flex-direction: column;
+                z-index: 1000;
+                .container-triangle {
+                    height: 20%;
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    .triangle {
+                        width: 3px;
+                        height: 100%;
+                        border-right: 6px solid transparent;
+                        border-top: 0px solid transparent;
+                        border-left: 6px solid transparent;
+                        border-bottom: 8px solid $color-quickact_fill;
+                    }
+                }
+                .label {
+                    height: 80%;
+                    width: 100%;
+                    background-color: $color-quickact_fill;
+                    border-radius: 3px;
+                    h6 {
+                        height: 100%;
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        font-size: 0.7rem;
+                        text-align: center;
+                        color: white;
+                        @include roboto;
+                    }
+                }
+            }
+            .icon {
+                a {
+                    height: 100%;
+                    width: auto;
+                    position: relative;
+                    &:hover {
+                        .container-label {
+                            display: flex;
+                        }
+                    }
+                    svg {
+                        height: auto;
+                        width: 18px;
+                        .cls-1 {
+                            fill: $color-quickact_icon;
+                        }
+                    }
+                    span {
+                        width: 12px;
+                        height: 12px;
+                        background-color: red;
+                        position: absolute;
+                        top: 0px;
+                        right: -6px;
+                        border-radius: 50%;
+                        font-size: 0.6rem;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: white;
+                        padding-left: 1px;
+                    }
+                }
+            }
+        }
+    }
+    .navpoint,
+    .datefilter {
+        height: 100%;
+    }
+    .navpoint {
+        width: 5.6em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 2rem;
+        h6 {
+            height: 1.3em;
+            width: auto;
+            margin: 0;
+            @include roboto;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+    }
+    .datefilter {
+        width: 15em;
+        display: flex;
+        .date,
+        .reload {
+            height: 100%;
+        }
+        .date {
+            width: 75%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            input {
+                height: 68%;
+                width: 94%;
+                border: none;
+                padding: 0 11px;
+                border-radius: 6px;
+                border: 1px solid red;
+                @include roboto;
+                outline: none;
+                cursor: pointer;
+            }
+        }
+        .reload {
+            width: 25%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            button {
+                width: 2rem;
+                height: 2rem;
+                border: 1px solid red;
+                border-radius: 7px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: rgba(255, 0, 0, 0.33);
+                &:hover {
+                    background-color: rgba(255, 0, 0, 0.6);
+                }
+            }
+            svg {
+                height: auto;
+                width: 60%;
+                .cls-1 {
+                    fill: rgba(104, 100, 100, 0.884);
+                }
+            }
+        }
+    }
+}

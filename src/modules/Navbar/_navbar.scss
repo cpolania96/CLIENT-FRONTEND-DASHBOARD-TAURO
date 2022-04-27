@@ -1,0 +1,185 @@
+.navbar {
+    width: 100%;
+    grid-area: 1 / 1 / 6 / 2;
+    height: 100vh;
+    background-color: $color-section_fondo;
+    display: flex;
+    flex-direction: column;
+    @include roboto;
+    position: relative;
+    .container-logo {
+        height: 5em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        svg {
+            height: 3.3em;
+            width: auto;
+            padding-bottom: 6px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.548);
+            .cls-1 {
+                fill: $color-logo_principal;
+            }
+            .cls-2 {
+                fill: $color-logo_secundario;
+            }
+            .cls-3 {
+                fill: $color-logo_slogan;
+            }
+        }
+    }
+    .container-menu {
+        height: 27em;
+        display: flex;
+        justify-content: center;
+        padding-top: 0.6rem;
+        .menu-items {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            font-weight: bold;
+            padding-left: 0;
+            li {
+                height: 7%;
+                width: 84%;
+                list-style: none;
+                margin-bottom: 4px;
+                font-weight: 100;
+                a {
+                    height: 100%;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    padding-left: 0.5rem;
+                    color: $color-menu_fuente;
+                    text-decoration: none;
+                    &:hover {
+                        background-color: white;
+                        cursor: pointer;
+                        border-radius: 5px;
+                        color: $color-menu_fuente-hover;
+                        font-weight: bold;
+                        transition: 0.4s;
+                        .cls-1 {
+                            fill: $color-menu_icon-hover;
+                        }
+                    }
+                    span {
+                        height: auto;
+                        width: 1rem;
+                        margin-right: 0.5rem;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        svg {
+                            width: 100%;
+                            height: auto;
+                            .cls-1 {
+                                fill: $color-menu_icon;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .button-inicio {
+            width: 100%;
+            height: 6%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            a {
+                height: 100%;
+                width: 14%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 4px;
+                &:hover {
+                    background-color: $color-home_round-hover;
+                    transition: 0.3s;
+                    .cls-1 {
+                        fill: $color-home_fill-hover;
+                    }
+                }
+                svg {
+                    height: 79%;
+                    width: auto;
+                    .cls-1 {
+                        fill: $color-home_fill;
+                    }
+                }
+            }
+        }
+        .menu-title {
+            width: 82%;
+            height: 6%;
+            display: flex;
+            text-align: left;
+            align-items: center;
+            margin: 0.4rem 0;
+            p {
+                height: 100%;
+                color: $color-section_title;
+                font-size: 0.7rem;
+                display: flex;
+                align-items: center;
+                margin: 0;
+            }
+        }
+    }
+}
+
+.container-logout {
+    height: 3em;
+    width: 100%;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 18px;
+    button {
+        height: 80%;
+        width: 88%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        color: white;
+        font-size: 1.1rem;
+        font-weight: 500;
+        padding: 0.5em 1.2em;
+        background: $color-menu_btn;
+        border: 1px solid white;
+        position: relative;
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 0px;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            transition: all 1s ease;
+        }
+        &:hover:before {
+            width: 100%;
+        }
+    }
+    span {
+        height: 100%;
+        width: 10%;
+        margin-right: 0.5rem;
+        svg {
+            height: 1rem;
+            width: auto;
+            .cls-1 {
+                fill: white;
+            }
+        }
+    }
+}

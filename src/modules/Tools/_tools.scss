@@ -1,0 +1,84 @@
+.container-tools {
+    height: 100%;
+    width: 17em;
+    right: 0;
+    margin: 0 17px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 1.5em;
+
+    .profile {
+        width: 11em;
+        height: 100%;
+        display: flex;
+        border-left: 1px solid rgba(104, 100, 100, 0.199);
+        border-right: 1px solid rgba(104, 100, 100, 0.199);
+        background-color: rgba(104, 100, 100, 0.05);
+        a,
+        .profile-photo,
+        .profile-details {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        a {
+            height: 100%;
+            width: 100%;
+            text-decoration: none;
+            color: rgba(104, 100, 100, 0.884);
+            .profile-photo {
+                height: 100%;
+                width: 22%;
+                padding-left: 0.3rem;
+                .miniature {
+                    height: 2rem;
+                    width: 2rem;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: $color-miniature_fill;
+                    color: white;
+                }
+            }
+            .profile-details {
+                height: 100%;
+                width: 78%;
+                display: flex;
+                flex-direction: column;
+                padding-left: 0.5rem;
+                h5,
+                h6 {
+                    height: 100%;
+                    width: 100%;
+                    @include roboto;
+                    margin: 0;
+                    display: flex;
+                    justify-content: left;
+                    align-items: center;
+                }
+                .details-name,
+                .details-info {
+                    height: 50%;
+                    width: 100%;
+                }
+                .details-name {
+                    h5 {
+                        font-size: 1rem;
+                        padding-top: 0.6rem;
+                        font-weight: bold;
+                    }
+                }
+                .details-info {
+                    h6 {
+                        font-size: 0.7rem;
+                        padding-bottom: 0.6rem;
+                    }
+                }
+            }
+        }
+    }
+}
+@import "./Notifications/container_notifications";
+@import "./Settings/Settings";

@@ -1,0 +1,43 @@
+.modal {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.is-open {
+    display: flex;
+}
+.modal-container {
+    position: relative;
+    width: 29rem;
+    height: 31rem;
+    background-color: #dd4b46;
+    button {
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        border: none;
+        background-color: #dd4b46;
+        position: absolute;
+        color: white;
+        font-size: 0.9rem;
+        padding-left: 1px;
+        top: 5px;
+        right: 5px;
+        @include roboto;
+        cursor: pointer;
+        &:hover {
+            color: white;
+        }
+    }
+}
+.modal-close {
+    position: absolute;
+}

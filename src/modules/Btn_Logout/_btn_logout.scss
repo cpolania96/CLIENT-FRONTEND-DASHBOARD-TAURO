@@ -1,0 +1,36 @@
+.btn-logout {
+    height: 80%;
+    width: 88%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 0.5em 1.2em;
+    background: $color-menu_btn;
+    border: 1px solid white;
+    position: relative;
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 0px;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.1);
+        transition: all 1s ease;
+    }
+    &:hover:before {
+        width: 100%;
+    }
+    span {
+        svg {
+            .st0 {
+                fill: white;
+            }
+        }
+    }
+}

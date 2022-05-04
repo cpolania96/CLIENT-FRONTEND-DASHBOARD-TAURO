@@ -1,0 +1,41 @@
+.notifications {
+    width: 2em;
+    height: 100%;
+    cursor: pointer;
+    .icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        svg {
+            height: auto;
+            width: 58%;
+            .cls-1 {
+                fill: $color-notifications_icon;
+            }
+        }
+        span {
+            position: absolute;
+            width: 0.8rem;
+            height: 0.8rem;
+            background-color: #ff2e25;
+            right: 2px;
+            top: 20px;
+            border-radius: 50%;
+            p {
+                height: 100%;
+                width: 100%;
+                margin: 0;
+                font-size: 0.7rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                @include roboto;
+                color: $color-notifications_span-text;
+            }
+        }
+    }
+}
+@import "./Notification_Expanded/notification_expanded";

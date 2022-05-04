@@ -1,0 +1,26 @@
+.settings {
+    width: 2em;
+    height: 20px;
+    button {
+        border-radius: 0;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        background-color: transparent;
+        svg {
+            height: 100%;
+            width: 1.5rem;
+            .cls-1 {
+                fill: $color-settings_icon;
+            }
+        }
+        &:focus {
+            box-shadow: none;
+        }
+    }
+}
+@import "./Container_Settings/container_settings";

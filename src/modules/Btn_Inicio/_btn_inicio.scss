@@ -1,0 +1,29 @@
+.button-inicio {
+    width: 13%;
+    height: 6%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+        &:hover {
+            background-color: #ffffff;
+            transition: 0.3s;
+            .cls-1 {
+                fill: #ff2e25;
+            }
+        }
+        svg {
+            height: 79%;
+            width: auto;
+            .cls-1 {
+                fill: #ffffff;
+            }
+        }
+    }
+}

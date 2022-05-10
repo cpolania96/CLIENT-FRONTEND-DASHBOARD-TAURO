@@ -1,5 +1,4 @@
 import React, { createContext, useEffect, useState } from 'react'
-
 export const ProductsContext = createContext([])
 
 export const ProductsContextProvider = ({ children }) => {
@@ -14,23 +13,28 @@ export const ProductsContextProvider = ({ children }) => {
         product_price: ' ',
         product_description: ' '
     })
+    const [load, isLoad] = useState(false)
+    const [loading, setLoading] = useState(true)
+    const [useID, setUseID] = useState()
+
+    const URL = 'http://localhost:9090'
 
     const handlerChange = (e) => {
-        setProducts({
+        setProductsPOST({
             ...productsPOST,
             [e.target.name]: e.target.value
         })
     }
 
-    const URL = 'http://localhost:9090'
-    const RUTA = `${URL}/api/productos/getAll`
-
     useEffect(() => {
+        const RUTA = `${URL}/api/productos/getAll`
         fetch(RUTA)
             .then(response => response.json())
             .then(data => setProducts(data))
-            .catch(error => console.log(error))
-    }, [])
+            .then(setTimeout(() => {
+                setLoading(false)
+            }, 1000))
+    }, [load])
 
     const handlerSubmit = () => {
         const requestInit = {
@@ -53,13 +57,26 @@ export const ProductsContextProvider = ({ children }) => {
             product_description: ' '
         })
     }
+    const handlerDelete = (id) => {
+        const requestInit = {
+            method: 'DELETE'
+        }
+        fetch(`${URL}/api/productos/${id}`, requestInit)
+            .then(res => res.text())
+            .then(res => console.log(res))
+            .finally(isLoad(true))
+    }
 
     return (
         <ProductsContext.Provider
             value={{
                 products,
                 handlerSubmit,
-                handlerChange
+                handlerChange,
+                handlerDelete,
+                loading,
+                useID,
+                setUseID
             }}>
             {children}
         </ProductsContext.Provider>

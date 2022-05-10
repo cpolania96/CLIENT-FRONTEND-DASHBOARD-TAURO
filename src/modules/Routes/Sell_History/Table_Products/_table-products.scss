@@ -4,6 +4,7 @@
     margin: 0 auto;
     position: relative;
     table {
+        height: 32rem;
         width: 100%;
         margin-top: 7rem;
         display: flex;
@@ -49,3 +50,25 @@
         color: rgb(104, 100, 100);
     }
 }
+.no-products {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h2 {
+        height: 3rem;
+        width: 18rem;
+        font-family: "Roboto", sans-serif;
+        color: #686464;
+        font-size: 1.2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.no-products-size {
+    height: 24rem;
+    width: 100%;
+}
+@import "./Actions/actions";

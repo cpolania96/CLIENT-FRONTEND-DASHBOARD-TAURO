@@ -1,7 +1,9 @@
-import React from 'react'
-import Modal from './Modal/Modal'
+import React, { useContext } from 'react'
+import { ProductsContext } from '../../Context/Products_Context'
+import Modal from '../Modal/Modal'
 
-function Modal_AddVenta({ isOpen, closeModal, handlerSubmit, handlerChange }) {
+function Modal_AddVenta({ isOpen, closeModal }) {
+    const { handlerSubmit, handlerChange } = useContext(ProductsContext)
     return (
         <Modal isOpen={isOpen} closeModal={closeModal}>
             <div className='add-sale'>

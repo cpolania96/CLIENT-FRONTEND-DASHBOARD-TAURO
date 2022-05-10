@@ -10,6 +10,12 @@
     top: 20px;
     right: 6.4rem;
     display: flex;
+    .loading-spinner {
+        width: 37px;
+        height: 100%;
+        position: absolute;
+        transform: translateX(-60px);
+    }
     button {
         height: 100%;
         width: 50%;
@@ -28,4 +34,5 @@
     }
 }
 @import "./Table_Products/table-products";
-@import "../../Modals/modal-addventas";
+@import "../../Modals/Modal_AddVentas/modal-addventas";
+@import "../Sell_History/Btn_AddProduct/btn-addproduct";

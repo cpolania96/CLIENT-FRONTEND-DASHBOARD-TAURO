@@ -1,0 +1,42 @@
+.modal-confirm {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    h4 {
+        height: 60%;
+        width: 100%;
+        display: flex;
+        @include roboto;
+        color: #ffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1rem;
+    }
+    .buttons {
+        height: 28%;
+        width: 87%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        align-items: center;
+        position: relative;
+        button {
+            width: 8rem;
+            height: 100%;
+            @include roboto;
+            color: #ffff;
+            border: 1px solid white;
+            border-radius: 4px;
+            position: initial;
+            &:hover {
+                background-color: white;
+                color: #dd4b46;
+                font-weight: bold;
+            }
+        }
+    }
+}

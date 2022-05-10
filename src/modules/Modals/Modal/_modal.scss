@@ -41,3 +41,23 @@
 .modal-close {
     position: absolute;
 }
+.is-modal-ac {
+    width: 20rem;
+    height: 13rem;
+}
+.ac-modal {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+@import "../Modal_Confirm/modal-confirm";
+@import "../Modal_AddVentas/modal-addventas";
+@import "../Modal/Modal_Notification/modal_notification";
+@import "../Modal_Confirm/modal-confirm";
